@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+        var temp={
+            name:"aditya",
+            func:function(){
+                document.write(this.name);
+            }
+        }
+        var func2=temp.func.bind(temp);
+        func2();
+
+    </script>
+</body>
+</html>

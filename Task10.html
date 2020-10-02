@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<script>
+            document.onload=function(){
+                func();
+            }
+            function func()
+            {
+                document.getElementById('div1').addEventListener('click',function(){
+                    alert("Div1 was clicked");
+                });
+            }
+        </script>-->
+
+    </head>
+    <body>
+        <div style='background-color: blue' id='div1'>
+            Div1
+            <div style='background-color: red' id='div2'>
+                Div2
+                <div style='background-color: yellow' id='div3'>
+                    Div3
+                </div>
+            </div>
+        </div>
+
+        <script>
+                document.getElementById('div1').addEventListener('click',function(){
+                    alert("Div1 was clicked");
+                });
+                document.getElementById('div2').addEventListener('click',function(e){
+                    alert("Div2 was clicked");
+                    e.stopPropagation();
+                });
+                document.getElementById('div3').addEventListener('click',function(e){
+                    alert("Div3 was clicked");
+                    e.stopImmediatePropagation();
+                });
+        </script>
+    </body>
+</html>

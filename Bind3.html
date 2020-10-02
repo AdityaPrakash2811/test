@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <ul id="root">
+      </ul>
+    <script>
+        var list=['first','second'];
+        for(var i in list) {
+            var li=document.createElement('li');
+            var text=document.createTextNode(list[i]);
+            var btn=document.createElement('button');
+            btn.innerHTML='index';
+            console.log(i);
+            btn.onclick=function(i) {
+                alert('index is'+i);
+            }.bind(null,i);
+            li.appendChild(text);
+            li.appendChild(btn);
+            document.getElementById("root").appendChild(li);
+        }
+
+    </script>
+</body>
+</html>

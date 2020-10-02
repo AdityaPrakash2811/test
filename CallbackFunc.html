@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function except(func){
+                func();
+            }
+
+            except(function(){
+                alert("Callback");
+            });
+            
+            //Another example
+
+            function func1(callback){
+                callback();
+            }
+
+            function disp(){
+                document.write("Example");
+            }
+
+            func1(disp);
+
+            //bind
+            except(function(){
+                alert(null,"bind");
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
